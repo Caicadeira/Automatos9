@@ -20,6 +20,12 @@ public class Automatos9 {
         ER.confere(ER.LETRAS, "ASDFEAFdafsafdsf");
         ER.confere(ER.DATA, "5/12/2019");
         ER.confere(ER.REAL, "4.51E21");
+        System.out.println("novos valores");
+        ER.confere(ER.DATA, "5/12/");
+        ER.confere(ER.VETOR, "variavelTeste[3]");
+        ER.confere(ER.VETOR, "variavelTeste[tres]");
+        ER.confere(ER.DATA, "5/12");
+        ER.confere(ER.VETOR, "variavelTeste[");
     }
     
 }
