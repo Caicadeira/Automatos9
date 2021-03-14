@@ -12,7 +12,7 @@ package automatos9;
 public class ExpressaoRegular {
     public String BRANCO,BRANCOS,REAL,DIA,MES,DATA;
     public String DIGITO,DIGITOS,FRACAO;
-    public String LETRA,LETRAS,QUANTIDADEPARDEA,VARIAVEL,INTEIRO,EXPONENCIAL;
+    public String LETRA,LETRAS,QUANTIDADEPARDEA,VARIAVEL,INTEIRO,EXPONENCIAL,VETOR;
     public ExpressaoRegular(){
         BRANCO="(\\s)";
         BRANCOS=BRANCO+"*";
@@ -24,7 +24,7 @@ public class ExpressaoRegular {
         LETRAS="("+LETRA+"*)";
         
         VARIAVEL="("+LETRA+"("+LETRA+"|"+DIGITO+")*)";
-        
+        VETOR= VARIAVEL+"\\[("+VARIAVEL+"|"+DIGITOS+")\\]";
         INTEIRO="((-?|\\+?)"+DIGITOS+")";
         
         EXPONENCIAL="(E(-?|\\+?)"+DIGITOS+")";
@@ -33,7 +33,7 @@ public class ExpressaoRegular {
         
         DIA="([1-5])";
         MES="([1-9]|10|11|12)";
-        DATA=DIA+"\\/"+MES+"\\/"+DIGITOS;
+        DATA=DIA+"\\/"+MES+"\\/"+DIGITOS+"*";
     }
     public void confere(String exp,String sentenca){
         if((sentenca!=null)&&!sentenca.isEmpty()){
