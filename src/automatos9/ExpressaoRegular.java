@@ -20,14 +20,14 @@ public class ExpressaoRegular {
         DIGITO="([0-9])";
         DIGITOS="("+DIGITO+"*)";
         
-        LETRA="([A-Za-z)";
+        LETRA="([A-Za-z])";
         LETRAS="("+LETRA+"*)";
         
         VARIAVEL="("+LETRA+"("+LETRA+"|"+DIGITO+")*)";
         
         INTEIRO="((-?|\\+?)"+DIGITOS+")";
         
-        EXPONENCIAL="(E(-?|||+?)"+DIGITOS+")";
+        EXPONENCIAL="(E(-?|\\+?)"+DIGITOS+")";
         FRACAO="(\\."+DIGITOS+")";
         REAL="("+DIGITOS+FRACAO+"?"+EXPONENCIAL+"?)";
         
