@@ -35,4 +35,15 @@ public class ExpressaoRegular {
         MES="([1-9]|10|11|12)";
         DATA=DIA+"\\/"+MES+"\\/"+DIGITOS;
     }
+    public void confere(String exp,String sentenca){
+        if((sentenca!=null)&&!sentenca.isEmpty()){
+            if (sentenca.matches(exp)){
+                System.out.println("W:'"+sentenca+"'ACEITA!");
+            }else{
+                System.err.println("W:'"+sentenca+"'rejeitada!");
+            }
+        }else{
+            System.err.println("sentença vazia");
+        }
+    }
 }
