@@ -15,7 +15,11 @@ public class Automatos9 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ExpressaoRegular ER=new ExpressaoRegular();
+        ER.confere(ER.DIGITOS, "00051120021");
+        ER.confere(ER.LETRAS, "ASDFEAFdafsafdsf");
+        ER.confere(ER.DATA, "5/12/2019");
+        ER.confere(ER.REAL, "4.51E21");
     }
     
 }
